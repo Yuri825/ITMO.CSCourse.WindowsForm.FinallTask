@@ -1,0 +1,10 @@
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.csprojAssemblyReference.cache
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.step.resources
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.Properties.Resources.resources
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.csproj.GenerateResource.cache
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.csproj.CoreCompileInputs.cache
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\bin\Debug\FinalTask.WindowsForms.exe.config
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\bin\Debug\FinalTask.WindowsForms.exe
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\bin\Debug\FinalTask.WindowsForms.pdb
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.exe
+D:\ИТМО\2. С#\С# разработка Windows приложений\Черновик\FinalTask.WindowsForms\FinalTask.WindowsForms\obj\Debug\FinalTask.WindowsForms.pdb
