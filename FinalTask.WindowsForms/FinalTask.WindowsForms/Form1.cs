@@ -16,6 +16,7 @@ namespace FinalTask.WindowsForms
         public step()
         {
             InitializeComponent();
+            
             System.Drawing.Drawing2D.GraphicsPath myPath = new System.Drawing.Drawing2D.GraphicsPath();
             myPath.AddEllipse(4, 4, button1.Width-8, button1.Height-8);
 
@@ -33,8 +34,10 @@ namespace FinalTask.WindowsForms
             textBox1.Text = "";
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
+
             enteredWord = textBox1.Text.Trim();
            
             for (int i = 0; i < ArrayCities.arrCities.Length; i++)
@@ -42,7 +45,7 @@ namespace FinalTask.WindowsForms
                 if (SupportedFunctions.CheckIsHasWordInArray(enteredWord, ArrayCities.arrCities) == false) // проверка на наличие города в массиве
                 {
                     MessageBox.Show("Такого города нет, вы проиграли ");
-                    
+                    this.Close();
                     break;
                 }
 
@@ -50,6 +53,7 @@ namespace FinalTask.WindowsForms
                 if (UsedWords.Contains(enteredWord.ToLower().Trim())) // проверка на наличие в списке использованных слов
                 {
                     MessageBox.Show("Такой город уже называли, вы проиграли ");
+                    this.Close();
                     break;
                 }
 
@@ -69,22 +73,26 @@ namespace FinalTask.WindowsForms
                 if (lastLetter != firstLetter)
                 {
                     SupportedFunctions.Print("Вы назвали город не на ту букву, вы проиграли ");
+                  
                     break;
                 }
             }
-
+    }
+     
+        private void rules_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
 
-        private void step_Load(object sender, EventArgs e)
+        private void rules_MouseMove(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void textBox1_MouseEnter(object sender, EventArgs e)
-        {
+            rules.BackColor = Color.Yellow;
             
         }
 
-       
+        private void rules_MouseLeave(object sender, EventArgs e)
+        {
+            rules.BackColor = Color.Lime;
+        }  
     }
 }
