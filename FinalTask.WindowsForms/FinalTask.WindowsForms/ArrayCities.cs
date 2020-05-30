@@ -84,11 +84,11 @@ namespace FinalTask.WindowsForms
 		 "Ясногорск", "Ясный", "Яхрома"
 		};
 
-		public static string[] arrImages = new string[]
+		public static System.Drawing.Bitmap[] arrImages = new System.Drawing.Bitmap[]
 		{
-			"FinalTask.WindowsForms.Properties.Resources.city3", 
-			"FinalTask.WindowsForms.Properties.Resources.city2", 
-			"FinalTask.WindowsForms.Properties.Resources.city1"
+			FinalTask.WindowsForms.Properties.Resources.city1, 
+			FinalTask.WindowsForms.Properties.Resources.city2, 
+			FinalTask.WindowsForms.Properties.Resources.city3
 		};
 	}
 }

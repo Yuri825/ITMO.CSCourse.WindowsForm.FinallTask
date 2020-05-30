@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FinalTask.WindowsForms.Properties.Resources.city3;
+            this.BackgroundImage = global::FinalTask.WindowsForms.Properties.Resources.city1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(991, 593);
             this.Controls.Add(this.rules);

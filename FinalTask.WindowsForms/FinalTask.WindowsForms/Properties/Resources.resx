@@ -121,10 +121,13 @@
   <data name="city1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\city1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="city3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="city2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\city2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="city3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\city3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="они" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\они.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

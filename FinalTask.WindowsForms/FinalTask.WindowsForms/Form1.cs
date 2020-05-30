@@ -25,33 +25,57 @@ namespace FinalTask.WindowsForms
         }
 
         int gamer = 1;
+        int count = 1; // переменная для смены фона
         List<string> UsedWords = new List<string> { }; // создаем список для использованных слов
 
         string enteredWord;
+        string lastLetter;
 
         private void textBox1_MouseClick(object sender, MouseEventArgs e) // очищаем поле ввода
         {
             textBox1.Text = "";
         }
-
-        
+        string lastWord;
+      
         private void button1_Click(object sender, EventArgs e)
         {
-
-            enteredWord = textBox1.Text.Trim();
            
+            // по нажатию на кнопку меняем фон:
+            this.BackgroundImage = ArrayCities.arrImages[count];
+            count++;
+            if (count == 3)
+            {
+                count = 0;
+            }
+           
+           
+            
+            enteredWord = textBox1.Text.Trim();
+
+            
+
+           if(UsedWords.Count > 0)
+            {
+                lastLetter = SupportedFunctions.GetLastLetter(lastWord); // последняя буква предыдущего слова
+            }
+                
+           
+           
+
             for (int i = 0; i < ArrayCities.arrCities.Length; i++)
             {
                 if (SupportedFunctions.CheckIsHasWordInArray(enteredWord, ArrayCities.arrCities) == false) // проверка на наличие города в массиве
                 {
+                    this.BackgroundImage = FinalTask.WindowsForms.Properties.Resources.они;
                     MessageBox.Show("Такого города нет, вы проиграли ");
                     this.Close();
                     break;
                 }
 
-
+               
                 if (UsedWords.Contains(enteredWord.ToLower().Trim())) // проверка на наличие в списке использованных слов
                 {
+                    this.BackgroundImage = FinalTask.WindowsForms.Properties.Resources.они;
                     MessageBox.Show("Такой город уже называли, вы проиграли ");
                     this.Close();
                     break;
@@ -62,20 +86,28 @@ namespace FinalTask.WindowsForms
 
                 gamer = SupportedFunctions.GetNumberPlayer(gamer); // меняем игрока
 
-                string lastLetter = SupportedFunctions.GetLastLetter(enteredWord); // последняя буква предыдущего слова
+                
 
                 numberOfGamer.Text = "Ход игрока № " + gamer;
-                label1.Text = "Введите название города РФ на букву " + "\"" + lastLetter + "\"";
+                label1.Text = "Введите название города РФ на букву " + "\"" + SupportedFunctions.GetLastLetter(enteredWord) + "\"";
                 enteredWord = textBox1.Text.Trim();
 
                 string firstLetter = SupportedFunctions.GetFirstLetter(enteredWord); // первая буква
 
-                if (lastLetter != firstLetter)
+                if(UsedWords.Count > 1)
                 {
-                    SupportedFunctions.Print("Вы назвали город не на ту букву, вы проиграли ");
-                  
-                    break;
+                    if (lastLetter != firstLetter)
+                    {
+                        MessageBox.Show(lastLetter);
+                        MessageBox.Show(firstLetter);
+                        this.BackgroundImage = FinalTask.WindowsForms.Properties.Resources.они;
+                        MessageBox.Show("Вы назвали город не на ту букву, вы проиграли ");
+                        this.Close();
+                        break;
+                    }
                 }
+                lastWord = enteredWord;
+                break;
             }
     }
      
