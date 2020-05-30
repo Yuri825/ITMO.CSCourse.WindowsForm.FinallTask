@@ -21,11 +21,11 @@ namespace FinalTask.WindowsForms
             return note;
         }
 
-
-
         public static string GetFirstLetter(string word) // функция получения первой буквы в слове
         {
-            return word.Substring(0, 1).ToLower();
+                return word.Substring(0, 1).ToLower();
+
+           
         }
 
 

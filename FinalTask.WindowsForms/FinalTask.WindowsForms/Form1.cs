@@ -28,16 +28,17 @@ namespace FinalTask.WindowsForms
         int count = 1; // переменная для смены фона
         List<string> UsedWords = new List<string> { }; // создаем список для использованных слов
 
-        string enteredWord;
-        string lastLetter;
+        string enteredWord; // переменная для вводимых слов
+        string lastLetter; // переменная для записи в нее предыдущего слова
+  
 
-        private void textBox1_MouseClick(object sender, MouseEventArgs e) // очищаем поле ввода
+        private void textBox1_MouseClick(object sender, MouseEventArgs e) // очищаем поле ввода по клику на него
         {
             textBox1.Text = "";
         }
         string lastWord;
       
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  // группа проверок введенного слова
         {
            
             // по нажатию на кнопку меняем фон:
@@ -47,20 +48,13 @@ namespace FinalTask.WindowsForms
             {
                 count = 0;
             }
-           
-           
             
-            enteredWord = textBox1.Text.Trim();
+            enteredWord = textBox1.Text.Trim();  // записываем в переменную значение из поля ввода
 
-            
-
-           if(UsedWords.Count > 0)
+           if(UsedWords.Count > 0) // если это слово не первое в игре
             {
                 lastLetter = SupportedFunctions.GetLastLetter(lastWord); // последняя буква предыдущего слова
             }
-                
-           
-           
 
             for (int i = 0; i < ArrayCities.arrCities.Length; i++)
             {
@@ -86,20 +80,19 @@ namespace FinalTask.WindowsForms
 
                 gamer = SupportedFunctions.GetNumberPlayer(gamer); // меняем игрока
 
-                
 
                 numberOfGamer.Text = "Ход игрока № " + gamer;
                 label1.Text = "Введите название города РФ на букву " + "\"" + SupportedFunctions.GetLastLetter(enteredWord) + "\"";
                 enteredWord = textBox1.Text.Trim();
-
                 string firstLetter = SupportedFunctions.GetFirstLetter(enteredWord); // первая буква
+        
+                 
+           
 
                 if(UsedWords.Count > 1)
                 {
-                    if (lastLetter != firstLetter)
+                    if (lastLetter != firstLetter) // проверка равны ли последняя буква предыдущего слова и первая текущего
                     {
-                        MessageBox.Show(lastLetter);
-                        MessageBox.Show(firstLetter);
                         this.BackgroundImage = FinalTask.WindowsForms.Properties.Resources.они;
                         MessageBox.Show("Вы назвали город не на ту букву, вы проиграли ");
                         this.Close();
@@ -109,7 +102,7 @@ namespace FinalTask.WindowsForms
                 lastWord = enteredWord;
                 break;
             }
-    }
+        }
      
         private void rules_Click(object sender, EventArgs e)
         {
